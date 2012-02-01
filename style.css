@@ -1,0 +1,452 @@
+/*
+
+Theme Name: Blattes
+Theme URI: http://blatteswp:8888/
+Description: 'Primeira versão do tema para Wordpress 3.0 do site Blattes Advogados'
+Author: Bruno Gama
+Author URI: http://www.imgnation.com.br
+Version: 1.0
+
+*/
+
+/** Reset Begin **/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: baseline;
+}
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+body {
+	line-height: 1;
+	color: black;
+	background: white;
+}
+ol, ul {
+	list-style: none;
+}
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: separate;
+	border-spacing: 0;
+}
+caption, th, td {
+	text-align: left;
+	font-weight: normal;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: "";
+}
+blockquote, q {
+	quotes: "" "";
+}
+
+/** END RESET **/
+
+/** CONSTANTS **/
+.clearfix:after {content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;}
+.clearfix {display: inline-block;}
+/* Hides from IE-mac \*/
+* html .clearfix { height: 1%;}
+.clearfix {display: block;}
+/* End hide from IE-mac */
+
+.float-left, .left, .fleft   { float:left; }
+.float-right, .right, .fright   { float:right; }
+.align-left     { text-align:left; }
+.align-right    { text-align:right!important; }
+.align-center   { text-align:center; }
+.justify  { text-align:justify; }
+.bold          { font-weight:bold; }
+.italic        { font-style:italic; }
+.underline     { border-bottom:1px solid; }
+.highlight     { background:#ffc; }
+.img-left      { float:left; margin:4px 10px 4px 0; }
+.img-right     { float:right; margin:4px 0 4px 10px; }
+.upper-case { text-transform: uppercase;}
+
+.column { display: block; float: left; }
+.first { margin-left: 0; }
+.final { margin-right: 0; border-right: none; }
+
+.block { display: block; }
+
+.hidden,
+.none { display: none; }
+/** END CONSTANTS **/
+
+html, body, #wrapper { height: 100%; width: 100%; }
+#wrapper { }
+body {
+	background: #ccc url(img/bg-alt.jpg);
+/*	font: 14px "Trebuchet MS" regular;*/
+/*	font-family: "Trebuchet MS", sans-serif;*/
+	min-width: 1000px;
+}
+
+/* #nav_bar ***/
+#nav_bar { 
+	color: #fff; 
+	background: #000; 
+	float: left;
+	min-height: 100%;
+	width: 45%; 
+}
+
+	#nav_bar div.nav_box {
+		background: #000 url(img/bg-nav_box.png) 0 15px no-repeat;
+		float: right;
+		height: 800px;
+		width: 410px;
+		position: relative;
+	}
+		div.nav_box h1 {
+			background: url(img/logo2.png) no-repeat;
+			display: block;
+			height:222px;
+			margin-top: 15px;
+			margin-bottom: 146px;
+			text-indent: -9999px;
+			width: 390px;
+		}
+		
+		
+	#menu { padding-right: 65px; }
+	
+		#menu ul { float: right; }
+		#menu li { margin-bottom: 20px; width: 214px; display: block; clear: both; float: right; }
+		
+			#menu li a {
+				float: right;
+				display: block;
+				height: 25px;
+				text-indent: -99999px;
+				background-repeat: no-repeat;
+			}
+			
+			#menu li.last { margin-bottom: 145px;}
+		
+			#menu a.home 					{ background: url(img/nav-sprite.png) -132px 0; width: 80px; }
+			#menu a.historico,
+			#menu li.page-item-15 a 			{ background: url(img/nav-sprite.png) -86px -40px; width: 125px; }
+			#menu a.falando_direito,
+			#menu li.page-item-6 a 		{ background: url(img/nav-sprite.png) 0px -83px; width: 212px;}		
+			#menu a.equipe,
+			#menu li.page-item-9 a 		{ background: url(img/nav-sprite.png) -122px -128px;  width: 91px;}
+			#menu a.atuacao,
+			#menu li.page-item-17 a 		{ background: url(img/nav-sprite.png) -101px -172px; width: 110px;}
+			#menu a.contato,
+			#menu li.page-item-12 a 		{ background: url(img/nav-sprite.png) -103px -214px; width: 109px; }
+		
+			#menu a:hover.home				{ background-position: 80px 0; }
+			#menu a:hover.historico,
+			#menu li:hover.page-item-15 a	{ background-position: 126px -40px; }
+			#menu a:hover.falando_direito,
+			#menu li:hover.page-item-6 a	{ background-position: 212px -83px; }		
+			#menu a:hover.equipe,
+			#menu li:hover.page-item-9 a { background-position: 91px -128px; }
+			#menu a:hover.atuacao,
+			#menu li:hover.page-item-17 a { background-position: 110px -172px; }
+			#menu a:hover.contato,
+			#menu li:hover.page-item-12 a { background-position: 109px -214px; }
+	
+	
+	#nav_footer { font: 12px 'Trebuchet MS'; padding-right: 65px; text-align: right; bottom:0; position: absolute; right:0; }	
+
+		
+        
+/* #content ***/
+#content {
+/*	border: 1px solid pink;*/
+	font: 'Trebuchet MS';
+/*	font-family: "Trebuchet MS", Helvetica, sans-serif;*/
+	float: left;
+	padding-left: 60px;
+	height: 674px !important;
+	width: 490px;
+	padding-top: 125px;
+	position: relative;
+}
+#content .the_content {
+	height: 500px;
+	overflow: auto;
+}
+@font-face {
+ font-family: FontHeading;
+ src: url("fonts/Fontin-2.eot") /* EOT file for IE */
+}
+
+@font-face {
+ font-family: FontHeading;
+ src: url("fonts/Fontin-2.ttf") /* TTF file for CSS3 browsers */
+}
+
+#content h2 {
+	font-family: FontHeading, "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	font-size: 30px;
+	text-shadow:#000 0px 0px 2px;
+	margin-top: 25px;
+
+}
+#content h3 {
+	font-family: FontHeading, "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	font-size: 24px;
+	text-shadow:#000 0px 0px 1px;
+	margin-top: 25px;
+	margin-left: 20px;
+	
+}
+#content p {
+	font-family: "Trebuchet MS", Helvetica, sans-serif !important;
+/*	font-family: "Times New Roman", Times, serif;*/
+	font-size: 14px;
+	line-height: 1.1em;
+	margin: 12px 0;
+}
+#content ul {
+	padding: 10px;
+}
+#content ul li {
+	list-style-type:  disc;
+
+	margin-bottom: 2px;
+	margin-left: 5px;
+}
+div.h2 hr, div.h3 hr { display: none; }
+div.h2 {
+	background: url(img/hr-h2.png) no-repeat top left;
+	height: 3px;
+	margin-top: 3px;
+	margin-bottom: 25px;
+	width: 364px;
+}
+div.h3 {
+	background: url(img/hr-h3.png) no-repeat top left;
+	height: 3px;
+	margin-top: 3px;
+	margin-bottom: 25px;
+	width: 364px;
+	margin-left: 20px;
+}
+.mh3 {
+	margin-left: 20px;
+}
+hr {
+	border: 0;
+/*	
+	display: block;
+    background-image: url(img/hr-h2.png);
+	border:0 !important;
+
+*/
+}
+#content strong { font-weight: bold; }
+#content em { font-style: italic !important; }
+#content a:link,
+#content a:visited,
+#content a:focus,
+#content a:active {
+	color: #7f0000;
+	text-decoration: none;
+}
+#content a:hover { text-decoration: underline; }
+ul.link_list li {
+	margin: 10px 0;
+}
+div.links-frontpage span,
+ul.link_list li span {
+	clear:both;
+	display:block;
+	float: right;
+}
+/***CONTENT-FOOTER**/
+
+#content_footer {
+	position: absolute;
+	bottom:0;
+	width: 100%;
+/*	display: none;*/
+}	
+	#content_footer span {
+		display: none	;
+		float: left;
+		font-weight: bold;
+	}
+	#content_footer li {
+		display: block;
+		float: left;
+		margin-right: 10px;
+	}
+	#content_footer li a {
+		text-indent: -9999px;
+		display: block;
+		background-repeat: no-repeat;
+		height: 22px;
+	}
+		#content_footer li a.facebook { background-image: url(img/facebook.png); width: 61px }
+		#content_footer li a.youtube { background-image: url(img/youtube.png); width: 56px }
+		#content_footer li a.twitter { background-image: url(img/twitter.png); width: 92px }
+/*
+@font-face {
+ font-family: MyCustomFont;
+ src: url("Fontin-2.eot") /* EOT file for IE *
+}
+
+@font-face {
+ font-family: MyCustomFont;
+ src: url("Fontin-2.ttf") /* TTF file for CSS3 browsers *
+}
+
+body {
+ font-family: MyCustomFont, Verdana, Arial, sans-serif;
+ font-size: medium;
+ color: black
+}
+
+span.header {
+ font-family: MyCustomFont, Impact, "Arial Black", sans-serif;
+ font-weight: bold;
+ color: red
+}
+*/
+
+/*
+	LIGHTBOX
+*/
+
+
+#panes { display: none; }
+.scrollable {
+
+	background: #000;
+	color: #fff;
+	overflow:hidden;
+	width: 490px;
+	height:473px;
+	-moz-box-shadow:0 0 90px 5px #000;
+	-webkit-box-shadow: 0 0 90px #000;
+}
+
+.scrollable .items {
+	width:20000em;
+	position:absolute;
+}
+a.at-link {}
+a.browse {
+	display: block;
+	height: 55px;
+	position: absolute;
+	z-index: 100;
+	width: 39px;
+	top: 95px;
+	
+}
+
+a.left {
+	background: url(img/seta-l.png) no-repeat;
+}
+a.right {
+	background: url(img/seta-r.png) no-repeat;
+	left: 451px;
+}
+.close {
+	background-image:url(img/close.png);
+	z-index: 100;
+	position:absolute;
+	left:451px;
+	top:0px;
+	cursor:pointer;
+	height:39px;
+	width:39px;
+}
+.items div {
+	float:left;
+	width: 490px;
+}
+.atuacao div p {
+	margin-top: 10px;
+}
+.atuacao div div.hr.h2 {
+	background-image: url(img/hr-areas.png);
+	background-position: 10px 0;
+}
+.atuacao div ul {
+	margin: 10px 50px;
+	clear: both;
+}
+.atuacao div ul li {
+/*	list-style-image: url(img/bullet-white.gif);*/
+}
+
+.items div p {
+	font-size: 12px;
+	font-family:  "Trebuchet MS";
+	margin: 5px 10px!important;
+}
+
+.items div p strong {
+	font-family: FontHeading !important;
+	font-size: 20px !important;
+	color: white;
+	font-weight: normal !important;
+}
+
+.items p, .items dt, .items dd { 	font: 12px "Trebuchet MS", Helvetica, sans-serif !important; }
+.items dl {
+	margin-left:  10px;
+
+}
+.items dt {
+list-style-type:circle
+
+}
+.items dd {
+	margin:  10px;
+}
+.wpcf7-mail-sent-ok {
+	border: none;
+}
+
+.wp_youtube_gallery h4 { display: none;}
+
+.equipe .items div img {
+	float:left;
+	margin-right: 10px;
+}
+.atuacao .items div {
+	/*width: 370px;*/
+}
+.atuacao .items .description {
+	padding: 10px 60px;
+	width: 370px;
+	height: 400px;
+	overflow: auto;
+}
+
+.equipe .browse {
+	top: 400px !important;
+}
+.equipe .items p {
+	font-size: 12px !important;
+	padding: 4px 10px !important;
+}
